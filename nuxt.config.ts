@@ -7,12 +7,19 @@ export default defineNuxtConfig({
 			{ charset: 'utf-8' },
 			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
 			{ name: 'format-detection', content: 'telephone=no' }
-		],
-		link: []
+		]
     },
 	css: ['/src/assets/styles/main.scss'],
+	alias: {
+		'@': '/src'
+	},
+	components: [
+		'@/components',
+		{ path: '@/components', extensions: ['vue'] }
+	],
 	dir: {
 		layouts: './src/layouts',
 		pages: './src/pages'
-	}
+	},
+	modules: ['nuxt-icon']
 })

@@ -5,8 +5,9 @@
 		</h1>
 	</div>
 </template>
-<style lang="scss">
-.white {
-	color: white;
+<style scoped lang="scss">
+@import './src/assets/styles/main';
+.white{
+	color: $primary;
 }
 </style>

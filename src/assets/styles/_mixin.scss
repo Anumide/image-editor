@@ -1,0 +1,8 @@
+@use './variables';
+@use 'sass:map';
+
+@mixin mQ($arg) {
+    @media screen and (max-width: map.get($screen_size, $arg)) {
+        @content
+    }
+}
