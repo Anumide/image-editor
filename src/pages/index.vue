@@ -1,13 +1,13 @@
 <template>
-	<div>
-		<h1 class="white">
-			Do something!
-		</h1>
+	<div class="container">
+		<Header />
 	</div>
 </template>
 <style scoped lang="scss">
-@import './src/assets/styles/main';
-.white{
-	color: $primary;
+@import '@/assets/styles/main';
+
+.container {
+	width: 100%;
+	height: 100vh;
 }
 </style>

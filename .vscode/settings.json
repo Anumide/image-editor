@@ -1,16 +1,14 @@
 {
     "vetur.completion.scaffoldSnippetSources": {
-
         "workspace": "💼",
         "user": "🗒️",
         "vetur": "✌",
-        "editor.formatOnSave": true,
-        "vetur.validation.template": false,
-        "editor.codeActionsOnSave": {
-          "source.fixAll.eslint": true
-        },
-        "eslint.validate": ["javascript"]
     },
+    "vetur.validation.template": false,
+    "eslint.validate": ["javascript"],
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true
+	},
     "volar.autoCompleteRefs": true
     
 }
