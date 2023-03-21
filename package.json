@@ -9,6 +9,7 @@
     "lint": "eslint ."
   },
   "devDependencies": {
+    "@nuxt/image-edge": "^1.0.0-27968280.9739e4d",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "@typescript-eslint/eslint-plugin": "^5.31.0",
     "babel-eslint": "^10.1.0",

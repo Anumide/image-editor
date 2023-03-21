@@ -21,5 +21,10 @@ export default defineNuxtConfig({
 		layouts: './src/layouts',
 		pages: './src/pages'
 	},
-	modules: ['nuxt-icon']
+	modules: ['nuxt-icon', '@nuxt/image-edge'],
+	image: {
+        cloudinary: {
+            baseURL: 'https://res.cloudinary.com/dhgg7l2bw/image/fetch'
+        }
+      }
 })
