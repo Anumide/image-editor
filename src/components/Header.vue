@@ -23,6 +23,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 7%;
 }
 
 .title_wrapper{
@@ -45,14 +46,14 @@ button {
     display: flex;
     align-items: center;
     gap: 5px;
-    padding: 5px 0.6rem;
+    padding: 0.5rem 0.8rem;
     border: none;
     border-radius: 3px;
     box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.1);
     color: #fff;
     background-color: #f47b39;
     cursor: pointer;
-    font-size: 8px;
+    font-size: 9px;
     font-weight: 600;
     letter-spacing: 0.3px;
     &:hover{
