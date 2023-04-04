@@ -12,7 +12,7 @@ provide('imgFile', selectedFile)
 		</main>
 	</div>
 </template>
-<style scoped lang="scss">
+<style lang="scss">
 @import '@/assets/styles/main';
 
 .container {
@@ -22,8 +22,9 @@ provide('imgFile', selectedFile)
 
 main{
 	width: 100vw;
-	height: 93%;
+	height: 92%;
 	display: flex;
 	justify-content: space-between;
+	background-color: var(--background_secondary);
 }
 </style>

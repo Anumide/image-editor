@@ -6,7 +6,7 @@
 @import '@/assets/styles/main';
 
 section{
-    background-color: $sidebar_background_primary;
+    background-color: var(--sidebar_background_primary);
     height: 100%;
     width: 19%;
     overflow: hidden;

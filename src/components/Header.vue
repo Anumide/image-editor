@@ -18,19 +18,19 @@
 @import '@/assets/styles/main';
 
 .heading {
-    background-color: $background_primary;
+    background-color: var(--background_primary);
     padding: 1rem 1rem 1rem 3rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 7%;
+    height: 8%;
 }
 
 .title_wrapper{
     display: flex;
     align-items: center;
     gap: 1rem;
-    color: $text_primary;
+    color: var(--text_primary);
     svg{
         cursor: pointer;
     }

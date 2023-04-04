@@ -1,16 +1,24 @@
 <script setup lang="ts">
 const selectedFile = ref(inject('imgFile'))
 
-    const elements = ref([
-        { icon: 'mingcute:settings-2-line', title: 'edit' },
-        { icon: 'bi:stars', title: 'Effects' },
-        { icon: 'ph:text-t', title: 'Text' }
-    ])
+const elements = ref([
+    { icon: 'mingcute:settings-2-line', title: 'edit' },
+    { icon: 'bi:stars', title: 'Effects' },
+    { icon: 'ph:text-t', title: 'Text' }
+])
 
-    const theme = ref('light')
+const theme = ref('light')
+const themeImg = ref('ion:moon-outline')
 
-    const themeImg = ref('ion:moon-outline')
-    // light theme img = line-md:moon-to-sunny-outline-transition
+const changeTheme = () => {
+    if (document.querySelector('.container')?.classList.contains('dark-theme')) {
+        themeImg.value = 'ion:moon-outline'
+        document.querySelector('.container')?.classList.remove('dark-theme')
+        return
+    }
+    themeImg.value = 'line-md:moon-to-sunny-outline-transition'
+    document.querySelector('.container')?.classList.add('dark-theme')
+}
 </script>
 
 <template>
@@ -29,7 +37,7 @@ const selectedFile = ref(inject('imgFile'))
 				<span>{{ element.title }}</span>
 			</div>
 		</div>
-		<div class="sidebar__left__element theme">
+		<div class="sidebar__left__element theme" @click="changeTheme">
 			<Icon :name="themeImg" size="20px" />
 		</div>
 	</section>
@@ -39,7 +47,7 @@ const selectedFile = ref(inject('imgFile'))
 @import '@/assets/styles/main';
 
 section{
-    background-color: $sidebar_background_primary;
+    background-color: var(--sidebar_background_primary);
     height: 100%;
     width: 6%;
     display: flex;
@@ -57,9 +65,9 @@ section{
     align-items: center;
     padding: 1em;
     cursor: pointer;
-    color: $text_primary;
+    color: var(--text_primary);
     &:hover {
-        background-color: lighten($text_primary, 60%);
+        // background-color: lighten(var(--text_primary), 60%);
     }
     span {
         font-size: 10px;
@@ -67,7 +75,7 @@ section{
     }
 
     &.active {
-        background-color: lighten($text_primary, 50%);
+        // background-color: lighten(var(--text_primary), 50%);
     }
 
 }

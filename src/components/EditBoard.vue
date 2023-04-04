@@ -61,6 +61,7 @@ section {
         justify-content: center;
         gap: 5px;
         cursor: pointer;
+		color: var(--text_primary);
     }
 }
 
