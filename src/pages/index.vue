@@ -1,5 +1,6 @@
 <script setup lang="ts">
-
+const selectedFile = ref()
+provide('imgFile', selectedFile)
 </script>
 <template>
 	<div class="container">

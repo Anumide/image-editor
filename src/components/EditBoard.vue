@@ -25,7 +25,7 @@
 
 <script setup lang="ts">
 const imageInput = ref()
-const selectedFile = ref()
+const selectedFile = ref(inject('imgFile'))
 
 const imageFile = () => {
 	const reader = new FileReader()

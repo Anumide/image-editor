@@ -1,9 +1,13 @@
 <script setup lang="ts">
+const selectedFile = ref(inject('imgFile'))
+
     const elements = ref([
         { icon: 'mingcute:settings-2-line', title: 'edit' },
         { icon: 'bi:stars', title: 'Effects' },
         { icon: 'ph:text-t', title: 'Text' }
     ])
+
+    const theme = ref('light')
 
     const themeImg = ref('ion:moon-outline')
     // light theme img = line-md:moon-to-sunny-outline-transition
@@ -16,7 +20,10 @@
 				v-for="(element, index) in elements"
 				:key="index"
 				class="sidebar__left__element"
-				:class="`sidebar__left__element--${index}`"
+				:class="[
+					`sidebar__left__element--${index}`,
+					{'disabled': !selectedFile}
+				]"
 			>
 				<Icon :name="element.icon" size="30px" />
 				<span>{{ element.title }}</span>
@@ -62,6 +69,10 @@ section{
     &.active {
         background-color: lighten($text_primary, 50%);
     }
+
+}
+ .disabled {
+    pointer-events: none;
 }
 
 @keyframes sideBarLeftAnim {
